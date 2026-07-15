@@ -26,3 +26,5 @@ LANGSMITH_TRACING=true
 LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
 LANGSMITH_API_KEY="langsmith api key here"
 LANGSMITH_PROJECT="Chatbot_Project"
+
+```
