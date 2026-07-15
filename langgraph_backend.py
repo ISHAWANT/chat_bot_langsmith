@@ -1,14 +1,14 @@
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, Annotated
 from langchain_core.messages import BaseMessage
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph.message import add_messages
 from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatOpenAI()
+llm = ChatGroq(model="llama-3.1-8b-instant")
 
 class ChatState(TypedDict):
     messages: Annotated[list[BaseMessage], add_messages]
